@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  /* background: pink; */
+}
+
+.title-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  /* background: cyan; */
+}
+
+#title {
+  font-size: 300%;
+}
