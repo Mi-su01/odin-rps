@@ -4,15 +4,43 @@ function getComputerChoice() {
   return cmptChoice[randomNum];
 }
 
-function getHumanChoice(input) {
-  let inputLowerCase = input.toLowerCase();
-  if (inputLowerCase == "rock") {
+function getHumanChoice() {
+  let input = prompt("Choose Rock Paper or Scissors!").toLowerCase();
+  if (input == "rock") {
     return "Rock";
-  } else if (inputLowerCase == "paper") {
+  } else if (input == "paper") {
     return "Paper";
-  } else if (inputLowerCase == "scissors") {
+  } else if (input == "scissors") {
     return "Scissors";
   } else {
-    return "invalid choice";
+    console.log("Invalid Choice, Try Again");
+  }
+}
+
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice == "Rock" && computerChoice == "Scissors") {
+    humanScore += 1;
+    console.log("You Win! Rock beats Scissors");
+  } else if (humanChoice == "Paper" && computerChoice == "Rock") {
+    humanScore += 1;
+    console.log("You Win! Paper beats Rock");
+  } else if (humanChoice == "Scissors" && computerChoice == "Paper") {
+    humanScore += 1;
+    console.log("You Win! Scissors beats Paper");
+  }
+
+  if (computerChoice == "Rock" && humanChoice == "Scissors") {
+    computerScore += 1;
+    console.log("You Lose! Scissors loses against Rock");
+  } else if (computerChoice == "Paper" && humanChoice == "Rock") {
+    computerScore += 1;
+    console.log("You Lose! Rock loses against Paper");
+  } else if (computerChoice == "Scissors" && humanChoice == "Paper") {
+    computerScore += 1;
+    console.log("You Lose! Paper loses against Scissors");
+  }
+
+  if (humanChoice == computerChoice) {
+    console.log("Tie! You chose the same hand. Score is not changed");
   }
 }
