@@ -14,3 +14,24 @@ body {
 #title {
   font-size: 300%;
 }
+
+.body-box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 5%;
+  width: auto;
+  font-size: 200%;
+  text-align: center;
+}
+
+#button-box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 15%;
+}
